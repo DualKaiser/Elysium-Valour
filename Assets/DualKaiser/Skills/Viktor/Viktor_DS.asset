@@ -16,6 +16,8 @@ MonoBehaviour:
   SkillType: 1
   skillDescription: Gain Armour equal to 15% of his current health. Gain 2 stacks
     of Hubris.
+  VFXList:
+  - {fileID: 11400000, guid: 68f2f43d2dc3b4c51b2b8bfc69bc34dd, type: 2}
   skillEffects:
   - {fileID: 11400000, guid: 4f8d80f9fd5c34ff5b60d398720339f6, type: 2}
   - {fileID: 11400000, guid: 76fae901519734a85a58d9f1f59d88d9, type: 2}

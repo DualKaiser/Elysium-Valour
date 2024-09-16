@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a995cbe32a1044736b783c8cbd820a79, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a995cbe32a1044736b783c8cbd820a79, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a995cbe32a1044736b783c8cbd820a79, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a995cbe32a1044736b783c8cbd820a79, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -47,6 +59,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a995cbe32a1044736b783c8cbd820a79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a995cbe32a1044736b783c8cbd820a79, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a995cbe32a1044736b783c8cbd820a79, type: 3}
       propertyPath: m_Name
@@ -90,7 +106,7 @@ MonoBehaviour:
   currentCritR: 0
   currentCritDmg: 0
   currentAMR: 0
-  passiveSkill: {fileID: 0}
+  passiveSkill: {fileID: 11400000, guid: 82cad68a96f2f487586d4c2320adc1b1, type: 2}
   offensiveSkill: {fileID: 11400000, guid: d4114ace0e39f46838bc641cbcf16937, type: 2}
   defensiveSkill: {fileID: 11400000, guid: e53bd6bb2c5d94c27818227685db4351, type: 2}
   ultimateSkill: {fileID: 11400000, guid: 312a1549b59bb4ebcabeb04284e31c02, type: 2}

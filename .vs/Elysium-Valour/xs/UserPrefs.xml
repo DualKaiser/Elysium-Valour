@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{60FEF7B2-E280-18DF-1960-45ABC1CE6296}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3dd335fc-0248-470e-a47f-097df57cbe8c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/INTEGRATIONS READ ME.txt">
+    <Files>
+      <File FileName="Assets/DualKaiser/Scripts/SO/VFXSO.cs" Line="1" Column="1" />
+      <File FileName="Assets/DualKaiser/Scripts/SO/Skill.cs" />
+      <File FileName="Assets/DualKaiser/Scripts/SO/Effects SO/SkillEffect.cs" />
+      <File FileName="Assets/DualKaiser/Scripts/SO/Effects SO/BuffEffect.cs" />
+      <File FileName="Assets/DualKaiser/Scripts/Runtime/GameManager.cs" />
+      <File FileName="Assets/DualKaiser/Scripts/SO/Cleanse.cs" />
+      <File FileName="Assets/DualKaiser/Scripts/Runtime/Character.cs" />
+      <File FileName="Assets/DualKaiser/Scripts/SO/Passives/Embrace.cs" Line="28" Column="13" />
+      <File FileName="Assets/DualKaiser/Scripts/SO/Effects SO/DotEffect.cs" />
+      <File FileName="Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/INTEGRATIONS READ ME.txt" Line="5" Column="134" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

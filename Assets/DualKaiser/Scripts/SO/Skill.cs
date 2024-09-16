@@ -23,6 +23,9 @@ namespace DualKaiser
         public string skillDescription;
 
         [Space]
+        public List<VFXSO> VFXList;
+
+        [Space]
         public List<SkillEffect> skillEffects;
 
         [Space]
@@ -41,6 +44,8 @@ namespace DualKaiser
 
         public override void Activate(Character user, Character target)
         {
+            PlayVFX(user, target);
+
             if (!isConditional)
             {
                 foreach (var effect in skillEffects)
@@ -86,6 +91,17 @@ namespace DualKaiser
                     return character.currentAMR; 
                 default:
                     return 0; 
+            }
+        }
+
+        private void PlayVFX(Character user, Character target)
+        {
+            foreach (var vfx in VFXList)
+            {
+                if (vfx != null)
+                {
+                    vfx.PlayVFX(user, target);
+                }
             }
         }
     }

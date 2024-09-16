@@ -27,6 +27,9 @@ namespace DualKaiser
         [Header("Damage Potency")]
         public float Potency;
 
+        [Header("Pierce Chance")]
+        public float Chance;
+
         public override void Activate(Character user, Character target)
         {
             float statValue = 0f;
@@ -47,17 +50,37 @@ namespace DualKaiser
                     break;
             }
 
-            // No Crit
-            if (Random.Range(0f, 1f) >= user.currentCritR)
+            float chanceToPierce = Random.Range(0f, 1.0f);
+
+            if (chanceToPierce > Chance)
             {
-                int damage = Mathf.RoundToInt(statValue * Potency);
-                target.TakeDamage(damage);
+                // No Crit
+                if (Random.Range(0f, 1f) >= user.currentCritR)
+                {
+                    int damage = Mathf.RoundToInt(statValue * Potency);
+                    target.TakeDamage(damage);
+                }
+                // With Crit
+                else
+                {
+                    int damage = Mathf.RoundToInt(statValue * Potency * user.currentCritDmg);
+                    target.TakeDamage(damage);
+                }
             }
-            // With Crit
-            else
+            else // Take PIERCE Damage 
             {
-                int damage = Mathf.RoundToInt(statValue * Potency * user.currentCritDmg);
-                target.TakeDamage(damage);
+                // No Crit
+                if (Random.Range(0f, 1f) >= user.currentCritR)
+                {
+                    int damage = Mathf.RoundToInt(statValue * Potency);
+                    target.TakePierceDamage(damage);
+                }
+                // With Crit
+                else
+                {
+                    int damage = Mathf.RoundToInt(statValue * Potency * user.currentCritDmg);
+                    target.TakePierceDamage(damage);
+                }
             }
         }
     }

@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350baec83808a471daa1bae86371c2d0, type: 3}
   m_Name: Aria_DS
   m_EditorClassIdentifier: 
-  skillName: Camouflage
+  skillName: Immolate
   SkillType: 1
-  skillDescription: Aria conceals herself, healing 8% of her current HP and gaining
-    70% ACC and 12% CRIT RATE for 2 turns
+  skillDescription: 'Aria creates a wall of fire, burning herself for 1 stack. She
+    gains 20% Def and 70% Acc for 2 turns. '
+  VFXList:
+  - {fileID: 11400000, guid: a06ee4e128c4245aaa469a5a1abe1e0b, type: 2}
   skillEffects:
-  - {fileID: 11400000, guid: d6dacb5e3681c433e8666ffc75da0dec, type: 2}
+  - {fileID: 11400000, guid: 16fd507772abb41d2bb124bb97fb1531, type: 2}
   - {fileID: 11400000, guid: 7b2ac61ef0d8c4ab9b1bf5354e209873, type: 2}
-  - {fileID: 11400000, guid: 5fc41349d91164c899c46221f1988a8d, type: 2}
+  - {fileID: 11400000, guid: d6097db75e447431080653c7faf87151, type: 2}
   isConditional: 0
   ConditionStat: 0
   threshold: 0

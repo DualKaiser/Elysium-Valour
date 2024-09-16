@@ -96,29 +96,39 @@ namespace DualKaiser
 
         public IEnumerator Char1Turn()
         {
-            C1ShowButtons();
-            C2HideButtons();
+            CheckPassives();
+
+            yield return new WaitForSeconds(0.1f);
 
             m_char1.CheckStatuses();
 
-            yield return new WaitForSeconds(2.5f);
-
             UpdateHealthBar();
+
+            C1ShowButtons();
+            C2HideButtons();
         }
 
         public IEnumerator Char2Turn()
         {
-            C1HideButtons();
-            C2ShowButtons();
+            CheckPassives();
+
+            yield return new WaitForSeconds(0.1f);
 
             m_char2.CheckStatuses();
 
-            yield return new WaitForSeconds(2.5f);
-
             UpdateHealthBar();
+
+            C1HideButtons();
+            C2ShowButtons();
         }
 
         // Button Methods
+
+        public void CheckPassives()
+        {
+            m_char1.ActivatePS(m_char2);
+            m_char2.ActivatePS(m_char1);
+        }
 
         public void C1OSButton()
         {
@@ -127,6 +137,8 @@ namespace DualKaiser
 
             m_char1.ActivateS1(m_char2);
             damageText.text = m_char1.offensiveSkill.skillName;
+
+            CheckPassives();
 
             UpdateHealthBar();
 
@@ -143,6 +155,8 @@ namespace DualKaiser
             m_char1.ActivateS2(m_char2);
             damageText.text = m_char1.defensiveSkill.skillName;
 
+            CheckPassives();
+
             UpdateHealthBar();
 
             state = BattleState.C2ACTION;
@@ -157,6 +171,8 @@ namespace DualKaiser
 
             m_char1.ActivateUS(m_char2);
             damageText.text = m_char1.ultimateSkill.skillName;
+
+            CheckPassives();
 
             UpdateHealthBar();
 
@@ -173,6 +189,8 @@ namespace DualKaiser
             m_char2.ActivateS1(m_char1);
             damageText.text = m_char2.offensiveSkill.skillName;
 
+            CheckPassives();
+
             UpdateHealthBar();
 
             state = BattleState.C1ACTION;
@@ -188,6 +206,8 @@ namespace DualKaiser
             m_char2.ActivateS2(m_char1);
             damageText.text = m_char2.defensiveSkill.skillName;
 
+            CheckPassives();
+
             UpdateHealthBar();
 
             state = BattleState.C1ACTION;
@@ -202,6 +222,8 @@ namespace DualKaiser
 
             m_char2.ActivateUS(m_char1);
             damageText.text = m_char2.ultimateSkill.skillName;
+
+            CheckPassives();
 
             UpdateHealthBar();
 

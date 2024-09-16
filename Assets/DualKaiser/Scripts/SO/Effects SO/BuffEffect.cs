@@ -15,6 +15,9 @@ namespace DualKaiser
             BUFF, DEBUFF, DOT
         }
 
+        [Space]
+        public VFXSO VFXEffect;
+
         public StatusType statusType;
 
         public enum BuffStat
@@ -30,6 +33,10 @@ namespace DualKaiser
         }
 
         public ScaleStat scaleStat;
+
+        [Space]
+        [Header("Max or Current")]
+        public bool scaleOffMax = false;
 
         [Space]
         public bool isPermanent = false;
@@ -52,6 +59,11 @@ namespace DualKaiser
         public override void Activate(Character user, Character target)
         {
             user.ApplyBuff(this);
+
+            if (VFXEffect != null)
+            {
+                VFXEffect.PlayVFX(user, target);
+            }
         }
 
         public void ApplyBuff(Character user)
@@ -90,6 +102,23 @@ namespace DualKaiser
                     return user.currentHP;
                 case ScaleStat.AMR:
                     return user.currentAMR;
+                default:
+                    return 0;
+            }
+        }
+
+        private int GetMaxScaleStatValue(Character user)
+        {
+            switch (scaleStat)
+            {
+                case ScaleStat.ATK:
+                    return user.baseATK;
+                case ScaleStat.DEF:
+                    return user.baseDEF;
+                case ScaleStat.HP:
+                    return user.baseHP;
+                case ScaleStat.AMR:
+                    return user.baseAMR;
                 default:
                     return 0;
             }
@@ -135,27 +164,55 @@ namespace DualKaiser
 
         private void ApplyPercentageBuff(Character user)
         {
-            int scaledStatValue = GetScaleStatValue(user);
-
-            int BuffAmount = (int)(scaledStatValue * Potency); 
-
-            switch (statToBuff)
+            if (!scaleOffMax)
             {
-                case BuffStat.ATK:
-                    user.BuffAtk(BuffAmount);
-                    break;
+                int scaledStatValue = GetScaleStatValue(user);
 
-                case BuffStat.DEF:
-                    user.BuffDef(BuffAmount);
-                    break;
+                int BuffAmount = (int)(scaledStatValue * Potency);
 
-                case BuffStat.HP:
-                    user.BuffHP(BuffAmount);
-                    break;
+                switch (statToBuff)
+                {
+                    case BuffStat.ATK:
+                        user.BuffAtk(BuffAmount);
+                        break;
 
-                case BuffStat.AMR:
-                    user.BuffAMR(BuffAmount);
-                    break;
+                    case BuffStat.DEF:
+                        user.BuffDef(BuffAmount);
+                        break;
+
+                    case BuffStat.HP:
+                        user.BuffHP(BuffAmount);
+                        break;
+
+                    case BuffStat.AMR:
+                        user.BuffAMR(BuffAmount);
+                        break;
+                }
+            }
+            else
+            {
+                int scaledStatValueMax = GetMaxScaleStatValue(user);
+
+                int BuffAmount = (int)(scaledStatValueMax * Potency);
+
+                switch (statToBuff)
+                {
+                    case BuffStat.ATK:
+                        user.BuffAtk(BuffAmount);
+                        break;
+
+                    case BuffStat.DEF:
+                        user.BuffDef(BuffAmount);
+                        break;
+
+                    case BuffStat.HP:
+                        user.BuffHP(BuffAmount);
+                        break;
+
+                    case BuffStat.AMR:
+                        user.BuffAMR(BuffAmount);
+                        break;
+                }
             }
         }
 
@@ -179,6 +236,14 @@ namespace DualKaiser
                     user.BuffAMR(-BuffAmount);
                     break;
 
+                case BuffStat.ACC:
+                    user.BuffACC(-BuffAmount);
+                    break;
+
+                case BuffStat.RES:
+                    user.BuffRES(-BuffAmount);
+                    break;
+
                 case BuffStat.CRITR:
                     user.BuffCritR(-BuffAmountF);
                     break;
@@ -191,27 +256,55 @@ namespace DualKaiser
 
         private void RemovePercentageBuff(Character user)
         {
-            int scaledStatValue = GetScaleStatValue(user);
-
-            int BuffAmount = (int)(scaledStatValue * Potency);
-
-            switch (statToBuff)
+            if (!scaleOffMax)
             {
-                case BuffStat.ATK:
-                    user.BuffAtk(-BuffAmount);
-                    break;
+                int scaledStatValue = GetScaleStatValue(user);
 
-                case BuffStat.DEF:
-                    user.BuffDef(-BuffAmount);
-                    break;
+                int BuffAmount = (int)(scaledStatValue * Potency);
 
-                case BuffStat.HP:
-                    user.BuffHP(-BuffAmount);
-                    break;
+                switch (statToBuff)
+                {
+                    case BuffStat.ATK:
+                        user.BuffAtk(-BuffAmount);
+                        break;
 
-                case BuffStat.AMR:
-                    user.BuffAMR(-BuffAmount);
-                    break;
+                    case BuffStat.DEF:
+                        user.BuffDef(-BuffAmount);
+                        break;
+
+                    case BuffStat.HP:
+                        user.BuffHP(-BuffAmount);
+                        break;
+
+                    case BuffStat.AMR:
+                        user.BuffAMR(-BuffAmount);
+                        break;
+                }
+            }
+            else
+            {
+                int scaledStatValueMax = GetMaxScaleStatValue(user);
+
+                int BuffAmount = (int)(scaledStatValueMax * Potency);
+
+                switch (statToBuff)
+                {
+                    case BuffStat.ATK:
+                        user.BuffAtk(-BuffAmount);
+                        break;
+
+                    case BuffStat.DEF:
+                        user.BuffDef(-BuffAmount);
+                        break;
+
+                    case BuffStat.HP:
+                        user.BuffHP(-BuffAmount);
+                        break;
+
+                    case BuffStat.AMR:
+                        user.BuffAMR(-BuffAmount);
+                        break;
+                }
             }
         }
     }

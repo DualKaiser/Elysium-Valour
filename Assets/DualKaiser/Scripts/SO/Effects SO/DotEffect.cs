@@ -8,7 +8,7 @@ namespace DualKaiser
     [CreateAssetMenu(fileName = "New DOT Effect", menuName = "DualKaiser/Statuses/Create New DOT")]
     public class DotEffect : SkillEffect
     {
-        public string statusName;
+        public string dotName;
 
         public enum StatusType
         {
@@ -36,11 +36,11 @@ namespace DualKaiser
             switch (dotTarget)
             {
                 case DotTarget.ENEMY:
-                    target.ApplyDot(new ActiveDot(this, Duration, Potency), user, target);
+                    target.ApplyDot(new ActiveDot(this, dotName, Duration, Potency), user, target);
                     break;
 
                 case DotTarget.SELF:
-                    user.ApplyDot(new ActiveDot(this, Duration, Potency), user, target);
+                    user.ApplyDot(new ActiveDot(this, dotName, Duration, Potency), user, target);
                     break;
             }
         }
@@ -48,13 +48,10 @@ namespace DualKaiser
         // Function to apply DOT damage
         public void DotDamage(Character target)
         {
-            int dotDamage = (int)(target.currentHP * Potency); // DOT damage based on target's HP
+            // DOT damage based on target's HP
+            int dotDamage = (int)(target.currentHP * Potency);
 
             target.TakeDamage(dotDamage);
-
-            Debug.Log(target.baseHP);
-
-            //Debug.Log($"{target.Name} takes {dotDamage} DOT damage from {statusName}.");
         }
     }
 
@@ -62,12 +59,17 @@ namespace DualKaiser
     public class ActiveDot
     {
         public DotEffect dotEffect;
+
+        public string dotName;
+
         public int remainingDuration;
+
         public float potency;
 
-        public ActiveDot(DotEffect dotEffect, int duration, float potency)
+        public ActiveDot(DotEffect dotEffect, string dotName, int duration, float potency)
         {
             this.dotEffect = dotEffect;
+            this.dotName = dotName;
             this.remainingDuration = duration;
             this.potency = potency;
         }
@@ -75,7 +77,6 @@ namespace DualKaiser
         public void ApplyDot(Character target)
         {
             dotEffect.DotDamage(target);
-            // VFX here 
         }
     }
 }

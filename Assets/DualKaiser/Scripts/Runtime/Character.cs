@@ -166,6 +166,7 @@ namespace DualKaiser
                     buffsToRemove.Add(buff);
                 }
             }
+
             foreach (var buff in buffsToRemove)
             {
                 activeBuffs.Remove(buff);
@@ -185,6 +186,7 @@ namespace DualKaiser
                     debuffsToRemove.Add(debuff);
                 }
             }
+
             foreach (var debuff in debuffsToRemove)
             {
                 activeDebuffs.Remove(debuff);
@@ -205,6 +207,7 @@ namespace DualKaiser
                     dotsToRemove.Add(dot);
                 }
             }
+
             foreach (var dot in dotsToRemove)
             {
                 activeDots.Remove(dot);
@@ -228,6 +231,11 @@ namespace DualKaiser
             ultimateSkill.Activate(this, target);
         }
 
+        public void ActivatePS(Character target)
+        {
+            passiveSkill.Activate(this, target);
+        }
+
         // Public Methods
 
         public void TakeDamage(int damage)
@@ -248,7 +256,7 @@ namespace DualKaiser
             // Leftover Damage
             if (damage > 0)
             {
-                currentHP -= damage - currentDEF;
+                currentHP -= damage - (int)(0.15f * currentDEF);
             }
         }
 
@@ -256,7 +264,7 @@ namespace DualKaiser
         { 
             if (damage > 0)
             {
-                currentHP -= damage - currentDEF;
+                currentHP -= damage;
             }
         }
 
@@ -272,7 +280,7 @@ namespace DualKaiser
 
         public void Cleanse()
         {
-            foreach (var debuff in activeDebuffs.ToList()) // Use ToList() to avoid modifying collection during iteration
+            foreach (var debuff in activeDebuffs.ToList()) 
             {
                 debuff.RemoveDebuff(this);
                 debuffDurations.Remove(debuff);

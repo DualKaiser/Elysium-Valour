@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898a2048241bc4c798d5632d1c9cbe98, type: 3}
+  m_Name: Aria_PS
+  m_EditorClassIdentifier: 
+  skillName: Embrace Flames
+  skillDescription: If Aria has burn on herself, her Atk increases by 20% and Crit
+    Rate increases by 12%
+  trackedStatus: {fileID: 11400000, guid: d6097db75e447431080653c7faf87151, type: 2}
+  buffEffects:
+  - {fileID: 11400000, guid: 617b07f065bcb47eeb5304f34e76406f, type: 2}
+  - {fileID: 11400000, guid: 3192c2dda3aaf4c0b80638ea8122bfb7, type: 2}
