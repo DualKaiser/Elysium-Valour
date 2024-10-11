@@ -48,9 +48,12 @@ namespace DualKaiser
         // Function to apply DOT damage
         public void DotDamage(Character target)
         {
+#if UNITY_ONLINE
+            int dotDamage = (int)(target.currentHP.Value * Potency);
+#else
             // DOT damage based on target's HP
             int dotDamage = (int)(target.currentHP * Potency);
-
+#endif
             target.TakeDamage(dotDamage);
         }
     }

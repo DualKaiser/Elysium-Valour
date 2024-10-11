@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350baec83808a471daa1bae86371c2d0, type: 3}
   m_Name: Viktor_OS
   m_EditorClassIdentifier: 
-  skillName: Spectral Orb
+  skillName: Spectral Blast
   SkillType: 0
   skillDescription: Deals 25% of ATK to the enemy. If Viktor has any Armour, deal
     10% more ATK.
+  VFXList: []
   skillEffects:
   - {fileID: 11400000, guid: f1781049243f84bec8f028d0200dff7c, type: 2}
   isConditional: 1

@@ -100,6 +100,27 @@ namespace DualKaiser
 
         private void ApplyPercentageDebuff(Character target)
         {
+#if UNITY_ONLINE
+            switch (statToDebuff)
+            {
+                case BuffStat.ATK:
+                    target.BuffAtk(-(int)(target.currentATK.Value * Potency));
+                    break;
+
+                case BuffStat.DEF:
+                    target.BuffDef(-(int)(target.currentDEF.Value * Potency));
+                    break;
+
+                case BuffStat.HP:
+                    target.BuffHP(-(int)(target.currentHP.Value * Potency));
+                    break;
+
+                // *Armour starts at 0
+                case BuffStat.AMR:
+                    target.BuffAMR(-(int)(target.currentAMR.Value * Potency));
+                    break;
+            }
+#else
             switch (statToDebuff)
             {
                 case BuffStat.ATK:
@@ -119,6 +140,7 @@ namespace DualKaiser
                     target.BuffAMR(-(int)(target.currentAMR * Potency));
                     break;
             }
+#endif
         }
 
         private void RemoveFlatDebuff(Character user)

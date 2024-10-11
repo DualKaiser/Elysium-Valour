@@ -23,7 +23,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Player\</OutputPath>
-    <DefineConstants>UNITY_2022_3_12;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2022_3_12;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;DEVELOPMENT_BUILD;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;UNITY_ONLINE;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -59,16 +59,32 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.12f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/DualKaiser/Scripts/Runtime/GameManager.cs" />
+    <Compile Include="Assets/UnityChan/Scripts/ThirdPersonCamera.cs" />
+    <Compile Include="Assets/DualKaiser/Scripts/VFXMover.cs" />
     <Compile Include="Assets/DualKaiser/Scripts/SO/Passives/Embrace.cs" />
-    <Compile Include="Assets/DualKaiser/Scripts/SO/Cleanse.cs" />
     <Compile Include="Assets/DualKaiser/Scripts/SO/Effects SO/HealEffect.cs" />
     <Compile Include="Assets/DualKaiser/Scripts/SO/Skill.cs" />
     <Compile Include="Assets/DualKaiser/Scripts/SO/Effects SO/BuffEffect.cs" />
+    <Compile Include="Assets/UnityChan/Scripts/CameraController.cs" />
     <Compile Include="Assets/DualKaiser/Scripts/Runtime/Character.cs" />
+    <Compile Include="Assets/Hovl Studio/Epic toon VFX 2/Scripts/EGA_EffectSound.cs" />
+    <Compile Include="Assets/Hovl Studio/Archer skills pack/Scripts/TargetProjectile.cs" />
+    <Compile Include="Assets/Hovl Studio/Archer skills pack/Scripts/FrontAttack.cs" />
+    <Compile Include="Assets/DualKaiser/Scripts/SO/Effects SO/DotEffect.cs" />
+    <Compile Include="Assets/DualKaiser/Scripts/SO/AnimSO.cs" />
+    <Compile Include="Assets/UnityChan/Scripts/UnityChanControlScriptWithRgidBody.cs" />
+    <Compile Include="Assets/UnityChan/Scripts/SceneLoader.cs" />
+    <Compile Include="Assets/NetworkUI.cs" />
+    <Compile Include="Assets/Hovl Studio/Archer skills pack/Scripts/AutoDestroyPS.cs" />
+    <Compile Include="Assets/UnityChan/Scripts/IdleChanger.cs" />
+    <Compile Include="Assets/DualKaiser/Scripts/Runtime/GameManager.cs" />
+    <Compile Include="Assets/DualKaiser/Scripts/SO/Cleanse.cs" />
+    <Compile Include="Assets/DualKaiser/Scripts/WebCamBehaviour.cs" />
+    <Compile Include="Assets/Hovl Studio/Epic toon VFX 2/Prefabs/Front attack/FrontMover.cs" />
+    <Compile Include="Assets/Hovl Studio/Archer skills pack/Scripts/ParticleCollisionInstance.cs" />
     <Compile Include="Assets/DualKaiser/Scripts/SO/Passives/Noblesse.cs" />
     <Compile Include="Assets/DualKaiser/Scripts/SO/Effects SO/DamageEffect.cs" />
-    <Compile Include="Assets/DualKaiser/Scripts/SO/Effects SO/DotEffect.cs" />
+    <Compile Include="Assets/UnityChan/Scripts/FaceUpdate.cs" />
     <Compile Include="Assets/DualKaiser/Scripts/SO/Effects SO/DebuffEffect.cs" />
     <Compile Include="Assets/DualKaiser/Scripts/SO/CharStats.cs" />
     <Compile Include="Assets/DualKaiser/Scripts/SO/Explode.cs" />
@@ -76,26 +92,58 @@
     <Compile Include="Assets/DualKaiser/Scripts/SO/Effects SO/SkillEffect.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets/UnityChan/Models/UnityChanShader/Shader/Unitychan_chara_fuku.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets/UnityChan/Models/UnityChanShader/Shader/Unitychan_chara_akarami_blend.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+    <None Include="Assets/Hovl Studio/Epic toon VFX 2/Prefabs/Punches/Readme.txt" />
+    <None Include="Assets/UnityChan/Models/UnityChanShader/Shader/Unitychan_chara_hair_ds.shader" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/SmoothSmoke.shader" />
+    <None Include="Assets/UnityChan/Models/UnityChanShader/Shader/Unitychan_chara_hada.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/DissolveNoise.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+    <None Include="Assets/Hovl Studio/AAA Magic circles Vol 3/Shaders/Add_Fresnel.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets/Hovl Studio/AAA Magic circles Vol 3/Shaders/Ice.shader" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/Distortion.shader" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/Blend_TwoSides.shader" />
+    <None Include="Assets/Hovl Studio/AAA Magic circles Vol 3/Shaders/Electricity.shader" />
+    <None Include="Assets/UnityChan/Models/UnityChanShader/Shader/Unitychan_chara_fuku_ds.shader" />
+    <None Include="Assets/UnityChan/Models/UnityChanShader/Shader/Unitychan_chara_eyelash_blend.shader" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/Blend_CenterGlow.shader" />
+    <None Include="Assets/Hovl Studio/AAA Magic circles Vol 3/Shaders/WaterOrb.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/Lightning.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+    <None Include="Assets/UnityChan/license.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/Blend_LinePath.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+    <None Include="Assets/UnityChan/Models/UnityChanShader/Shader/Unitychan_chara_hada_blend.shader" />
+    <None Include="Assets/StreamingAssets/Vuforia/VuforiaMars_Images.xml" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/BlendDistort.shader" />
+    <None Include="Assets/StreamingAssets/Vuforia/Reapers.xml" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/AddTrail.shader" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/Scroll.shader" />
+    <None Include="Assets/UnityChan/Models/UnityChanShader/Shader/Unitychan_chara_eye.shader" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/Fire.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets/UnityChan/Stage/Shader/AlphaMask.shader" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/Add_CenterGlow.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+    <None Include="Assets/UnityChan/Models/UnityChanShader/Shader/Unitychan_chara_hair.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+    <None Include="Assets/Hovl Studio/Archer skills pack/Shaders/Explosion.shader" />
+    <None Include="Assets/UnityChan/Models/UnityChanShader/Shader/Unitychan_chara_eye_blend.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -300,8 +348,20 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.12f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library/PackageCache/com.unity.collections@1.2.4/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.Unity.Wrapper">
+      <HintPath>Library/PackageCache/com.ptc.vuforia.engine@b724a8714d15/Vuforia/Plugins/Managed/Runtime/Vuforia.Unity.Wrapper.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.Unity.Engine">
+      <HintPath>Library/PackageCache/com.ptc.vuforia.engine@b724a8714d15/Vuforia/Plugins/Managed/Runtime/Vuforia.Unity.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/AOT/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.12f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
@@ -671,21 +731,77 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
-      <Project>{3040C171-CC3E-3227-D181-10A003DC340C}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
       <Project>{E57E0A3C-16D6-6151-F319-7EB48EC94930}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
-      <Project>{1BD65D43-A07D-57C2-0561-3CE8BF4D92FE}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
       <Project>{4C5C6A15-DCB7-0444-C22F-B8F89D2E89BF}</Project>
       <Name>Unity.Postprocessing.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.NetworkSolutionInterface.Player.csproj">
+      <Project>{3C3CD297-D839-4605-519D-DB5DB7E6E977}</Project>
+      <Name>Unity.Multiplayer.Tools.NetworkSolutionInterface.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Networking.Transport.Player.csproj">
+      <Project>{78E6E4BD-12F7-B353-1DF0-48F9FC95D7C9}</Project>
+      <Name>Unity.Networking.Transport.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
+      <Project>{4308CA55-F5D2-9E43-83C1-8F5AEEDB2D6F}</Project>
+      <Name>Unity.VisualScripting.Flow.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Netcode.Components.Player.csproj">
+      <Project>{DE2C2FF1-1D73-A524-EE60-6704609417AF}</Project>
+      <Name>Unity.Netcode.Components.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.NetStatsMonitor.Configuration.Player.csproj">
+      <Project>{0330B8E2-9A42-774D-0548-980D5293CC34}</Project>
+      <Name>Unity.Multiplayer.Tools.NetStatsMonitor.Configuration.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="VuforiaScripts.Player.csproj">
+      <Project>{EDB62694-0C88-8D71-7527-FA35B0CD4D44}</Project>
+      <Name>VuforiaScripts.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.NetStats.Player.csproj">
+      <Project>{094A7B68-C574-F3D8-C3A2-0C31190B7816}</Project>
+      <Name>Unity.Multiplayer.Tools.NetStats.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
+      <Project>{54A459D3-5D0B-C14C-ABCA-52B04EBA7C04}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.Player.csproj">
+      <Project>{DC070BB6-583A-62A3-6673-0C8346296E3A}</Project>
+      <Name>Unity.Collections.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Netcode.Runtime.Player.csproj">
+      <Project>{0F7D9C45-54FC-6406-8E12-32BA738B62B0}</Project>
+      <Name>Unity.Netcode.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.MetricTestData.Player.csproj">
+      <Project>{D5FD4328-1C23-8975-1C9A-481892CD2502}</Project>
+      <Name>Unity.Multiplayer.Tools.MetricTestData.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
+      <Project>{992A3ABD-B51E-0052-2B9F-5C31858A1A1B}</Project>
+      <Name>Unity.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.Common.Player.csproj">
+      <Project>{340E2C78-AC63-3B84-7D05-91274CCD13A8}</Project>
+      <Name>Unity.Multiplayer.Tools.Common.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Profiling.Core.Player.csproj">
+      <Project>{5466897D-3A47-E183-3660-9BAA93D48E16}</Project>
+      <Name>Unity.Profiling.Core.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
+      <Project>{3040C171-CC3E-3227-D181-10A003DC340C}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
+      <Project>{1BD65D43-A07D-57C2-0561-3CE8BF4D92FE}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
       <Project>{686FDBB4-9002-7786-F883-E3BC58344DBC}</Project>
@@ -695,13 +811,13 @@
       <Project>{09B2D852-7495-B151-991B-9285EBB1E6D6}</Project>
       <Name>Unity.VisualScripting.Core.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.NetworkProfiler.Runtime.Player.csproj">
+      <Project>{37C0DD4E-45C5-0749-318C-C8F5B597AD92}</Project>
+      <Name>Unity.Multiplayer.Tools.NetworkProfiler.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
       <Project>{DA6FC503-280C-433D-8A7E-DC2D00A183F8}</Project>
       <Name>UnityEngine.UI.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
-      <Project>{4308CA55-F5D2-9E43-83C1-8F5AEEDB2D6F}</Project>
-      <Name>Unity.VisualScripting.Flow.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
       <Project>{D78D27F0-EB8F-04BA-ECFA-6393154AD9AA}</Project>
@@ -711,25 +827,57 @@
       <Project>{708CA56E-B029-B819-32B9-76FB78665C53}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
-      <Project>{54A459D3-5D0B-C14C-ABCA-52B04EBA7C04}</Project>
-      <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
+    <ProjectReference Include="Unity.Multiplayer.Tools.NetStatsMonitor.Implementation.Player.csproj">
+      <Project>{E0FE072C-A093-54B8-99D6-99FABB24BCC6}</Project>
+      <Name>Unity.Multiplayer.Tools.NetStatsMonitor.Implementation.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.Player.csproj">
+      <Project>{B9F6905F-4BAB-F742-968C-EC26BDD3BC15}</Project>
+      <Name>Unity.InputSystem.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.ForUI.Player.csproj">
+      <Project>{3D30A9B6-C7E8-B2D3-FDE3-FD16934201CB}</Project>
+      <Name>Unity.InputSystem.ForUI.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.Initialization.Player.csproj">
+      <Project>{DC0A7A04-6267-5917-76F0-E55A2695972D}</Project>
+      <Name>Unity.Multiplayer.Tools.Initialization.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.Adapters.Player.csproj">
+      <Project>{4BD97C15-B92C-89F7-A0A2-091B2F4F38E7}</Project>
+      <Name>Unity.Multiplayer.Tools.Adapters.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Player.csproj">
       <Project>{AF535DD3-59C5-30D4-09E9-96EC00C67AC4}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
-      <Project>{992A3ABD-B51E-0052-2B9F-5C31858A1A1B}</Project>
-      <Name>Unity.TextMeshPro.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
       <Project>{6DFA6B13-8399-5ABE-0B6C-313F9B5FDE62}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.MetricTypes.Player.csproj">
+      <Project>{1EA4F33E-5445-E9E1-6FAB-D445EACF5A51}</Project>
+      <Name>Unity.Multiplayer.Tools.MetricTypes.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{0B2AD0D4-5428-18CF-E1B7-DBCF2BA65E6F}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Runtime.Player.csproj">
+      <Project>{DBD130FF-DDF6-D1EE-BD9A-49B77187B1D4}</Project>
+      <Name>IngameDebugConsole.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.NetStatsReporting.Player.csproj">
+      <Project>{18AFC70C-74A6-3E54-8D1B-DAA31B5A2CAC}</Project>
+      <Name>Unity.Multiplayer.Tools.NetStatsReporting.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.MetricEvents.Player.csproj">
+      <Project>{AA21FC6E-4552-2F78-936C-8F656499DBE2}</Project>
+      <Name>Unity.Multiplayer.Tools.MetricEvents.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Tools.NetStatsMonitor.Component.Player.csproj">
+      <Project>{B4E69B87-047D-EE78-266C-4AB13219BF1B}</Project>
+      <Name>Unity.Multiplayer.Tools.NetStatsMonitor.Component.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

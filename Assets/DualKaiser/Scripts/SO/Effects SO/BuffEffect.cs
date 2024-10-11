@@ -92,6 +92,21 @@ namespace DualKaiser
 
         private int GetScaleStatValue(Character user)
         {
+#if UNITY_ONLINE
+            switch (scaleStat)
+            {
+                case ScaleStat.ATK:
+                    return user.currentATK.Value;
+                case ScaleStat.DEF:
+                    return user.currentDEF.Value;
+                case ScaleStat.HP:
+                    return user.currentHP.Value;
+                case ScaleStat.AMR:
+                    return user.currentAMR.Value;
+                default:
+                    return 0;
+            }
+#else
             switch (scaleStat)
             {
                 case ScaleStat.ATK:
@@ -105,6 +120,7 @@ namespace DualKaiser
                 default:
                     return 0;
             }
+#endif
         }
 
         private int GetMaxScaleStatValue(Character user)

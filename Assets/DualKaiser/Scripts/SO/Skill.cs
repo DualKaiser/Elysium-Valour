@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 namespace DualKaiser
 {
@@ -44,8 +45,6 @@ namespace DualKaiser
 
         public override void Activate(Character user, Character target)
         {
-            PlayVFX(user, target);
-
             if (!isConditional)
             {
                 foreach (var effect in skillEffects)
@@ -73,12 +72,25 @@ namespace DualKaiser
                     }
                 }
             }
-
-
         }
 
         private int GetStatValue(Character character, conditionStat statType)
         {
+#if UNITY_ONLINE
+            switch (statType)
+            {
+                case conditionStat.ATK:
+                    return character.currentATK.Value;
+                case conditionStat.HP:
+                    return character.currentHP.Value;
+                case conditionStat.DEF:
+                    return character.currentDEF.Value;
+                case conditionStat.AMR:
+                    return character.currentAMR.Value;
+                default:
+                    return 0;
+            }
+#else
             switch (statType)
             {
                 case conditionStat.ATK:
@@ -92,17 +104,7 @@ namespace DualKaiser
                 default:
                     return 0; 
             }
-        }
-
-        private void PlayVFX(Character user, Character target)
-        {
-            foreach (var vfx in VFXList)
-            {
-                if (vfx != null)
-                {
-                    vfx.PlayVFX(user, target);
-                }
-            }
+#endif
         }
     }
 }

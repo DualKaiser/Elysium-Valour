@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Aria
   CharType: 0
   CharClass: 0
-  baseHP: 100
+  baseHP: 220
   baseATK: 100
   baseDEF: 0
   baseAMR: 0

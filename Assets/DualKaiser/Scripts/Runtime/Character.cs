@@ -1,18 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
-using static UnityEngine.GraphicsBuffer;
+using System;
 using System.Linq;
+using Unity.Collections;
+
+#if UNITY_ONLINE
+using Unity.Netcode;
+#endif
 
 namespace DualKaiser
 {
-    public class Character: MonoBehaviour
+#if UNITY_ONLINE
+    public class Character : NetworkBehaviour
+#else
+    public class Character : MonoBehaviour
+#endif
     {
+        public NetworkVariable<FixedString128Bytes> Name = new NetworkVariable<FixedString128Bytes>("Character", NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+
         public CharStats charstats;
 
-        public string Name;
+#if UNITY_ONLINE
+        public NetworkVariable<int> currentHP = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+        public NetworkVariable<int> currentATK = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+        public NetworkVariable<int> currentDEF = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+        public NetworkVariable<int> currentAMR = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
 
+        public NetworkVariable<float> currentACC = new NetworkVariable<float>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+        public NetworkVariable<float> currentRES = new NetworkVariable<float>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+        public NetworkVariable<float> currentCritR = new NetworkVariable<float>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+        public NetworkVariable<float> currentCritDmg = new NetworkVariable<float>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+#else
         [SerializeField]
         [Header("Runtime Stats")]
         public int currentHP;
@@ -26,10 +47,13 @@ namespace DualKaiser
         [Header("Shield")]
         public int currentAMR;
 
+#endif
+
         [Header("Passive")]
         public SkillEffect passiveSkill;
 
         [Header("Skills")]
+        [Space]
         public Skill offensiveSkill;
         public Skill defensiveSkill;
         public Skill ultimateSkill;
@@ -44,6 +68,38 @@ namespace DualKaiser
 
         [Header("Active DOTs")]
         public List<ActiveDot> activeDots = new List<ActiveDot>();
+
+        [Space]
+        [Header("Animations")]
+
+        [Space]
+        public List<AnimSO> OSAnimList;
+        public List<VFXSO> OSVFXList;
+        public float OSDelay;
+
+        [Space]
+        public List<AnimSO> DSAnimList;
+        public List<VFXSO> DSVFXList;
+        public float DSDelay;
+
+        [Space]
+        public List<AnimSO> USAnimList;
+        public List<VFXSO> USVFXList;
+        public float USDelay;
+
+        public List<AnimSO> DamageAnimList;
+
+        [SerializeField] private TextMeshProUGUI charHUD;
+        [SerializeField] private TextMeshProUGUI charHPValue;
+
+        public Slider hpslider;
+        public Slider amrslider;
+
+        public Button osBtn;
+        public Button dsBtn;
+        public Button usBtn;
+
+        public GameObject btnTints;
 
         // base Stats
         [HideInInspector]
@@ -64,7 +120,78 @@ namespace DualKaiser
         public float baseCritDmg;
 
 
-        private void Awake()
+        public override void OnNetworkSpawn()
+        {
+            base.OnNetworkSpawn();
+
+            InitializeBaseStats();
+            InitializeCurrentStats();
+            InitializeUI();
+
+            currentHP.OnValueChanged += (int previousValue, int newValue) =>
+            {
+                UpdateUI();
+            };
+
+            var gameManager = GameObject.FindWithTag("Game Manager").GetComponent<GameManager>();
+
+            if (gameObject.tag == "Aria")
+            {
+                osBtn.onClick.AddListener(gameManager.C1OSButtonServerRpc);
+                dsBtn.onClick.AddListener(gameManager.C1DSButtonServerRpc);
+                usBtn.onClick.AddListener(gameManager.C1USButtonServerRpc);
+
+                btnTints.SetActive(false);
+            }
+            else if (gameObject.tag == "Viktor")
+            {
+                osBtn.onClick.AddListener(gameManager.C2OSButtonServerRpc);
+                dsBtn.onClick.AddListener(gameManager.C2DSButtonServerRpc);
+                usBtn.onClick.AddListener(gameManager.C2USButtonServerRpc);
+
+                btnTints.SetActive(false);
+            }
+            
+        }
+
+        private void Update()
+        {
+            var gameManager = GameObject.FindWithTag("Game Manager").GetComponent<GameManager>();
+
+            if (gameManager.networkState.Value == BattleState.C1ACTION)
+            {
+                if (gameObject.tag == "Aria")
+                {
+                    btnTints.SetActive(true);
+                }
+                else if (gameObject.tag == "Viktor")
+                {
+                    btnTints.SetActive(false);
+                }
+            }
+            else
+            {
+                return;
+            }
+
+            if (gameManager.networkState.Value == BattleState.C2ACTION)
+            {
+                if (gameObject.tag == "Aria")
+                {
+                    btnTints.SetActive(false);
+                }
+                else if (gameObject.tag == "Viktor")
+                {
+                    btnTints.SetActive(true);
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void InitializeBaseStats()
         {
             baseHP = charstats.baseHP;
             baseATK = charstats.baseATK;
@@ -74,21 +201,57 @@ namespace DualKaiser
             baseRES = charstats.baseRES;
             baseCritR = charstats.critR;
             baseCritDmg = charstats.critDmg;
-       
-            //Initialise Stats
-            currentHP = charstats.baseHP;
-            currentATK = charstats.baseATK;
-            currentDEF = charstats.baseDEF;
-            currentAMR = charstats.baseAMR;
-            currentACC = charstats.baseACC;
-            currentRES = charstats.baseRES;
-            currentCritR = charstats.critR;
-            currentCritDmg = charstats.critDmg;
         }
 
+        private void InitializeCurrentStats()
+        {
+#if UNITY_ONLINE
+            if (IsServer)
+            {
+                Name.Value = charstats.Name;
+
+                currentHP.Value = baseHP;
+                currentATK.Value = baseATK;
+                currentDEF.Value = baseDEF;
+                currentAMR.Value = baseAMR;
+                currentACC.Value = baseACC;
+                currentRES.Value = baseRES;
+                currentCritR.Value = baseCritR;
+                currentCritDmg.Value = baseCritDmg;
+            }
+#else
+            currentHP = baseHP;
+            currentATK = baseATK;
+            currentDEF = baseDEF;
+            currentAMR = baseAMR;
+            currentACC = baseACC;
+            currentRES = baseRES;
+            currentCritR = baseCritR;
+            currentCritDmg = baseCritDmg;
+#endif
+        }
+
+        private void InitializeUI()
+        {
+            charHUD.text = Name.Value.ToString();
+
+            charHPValue.text = currentHP.Value.ToString();
+
+            hpslider.maxValue = currentHP.Value;
+            hpslider.value = currentHP.Value;
+
+            amrslider.value = currentAMR.Value;
+        }
+
+
         // Method to Apply Buff Statuses
+
         public void ApplyBuff(BuffEffect buffEffect)
         {
+#if UNITY_ONLINE
+            if (IsServer)
+            {
+#endif
             buffEffect.ApplyBuff(this);
 
             if (!buffEffect.isPermanent)
@@ -105,11 +268,19 @@ namespace DualKaiser
                     buffDurations[uniqueBuffInstance] = uniqueBuffInstance.Duration;
                 }
             }
+#if UNITY_ONLINE
+            }
+#endif
         }
 
         // Method to Apply Debuff Statuses
+
         public void ApplyDebuff(DebuffEffect debuffEffect, Character user, Character target)
         {
+#if UNITY_ONLINE
+            if (IsServer)
+            {
+#endif
             if (CanApplyStatus(user, target))
             {
                 debuffEffect.ApplyDebuff(this);
@@ -124,24 +295,39 @@ namespace DualKaiser
                     debuffDurations[debuffEffect] = debuffEffect.Duration;
                 }
             }
-
             debuffEffect.ApplyDebuff(this);
+#if UNITY_ONLINE
+            }
+#endif
         }
 
         // Method to Apply DOTs
+
         public void ApplyDot(ActiveDot dotEffect, Character user, Character target)
         {
+#if UNITY_ONLINE
+            if (IsServer)
+            {
+#endif
             if (CanApplyStatus(user, target))
             {
                 activeDots.Add(dotEffect);
             }
+#if UNITY_ONLINE
+            }
+#endif
         }
 
         public bool CanApplyStatus(Character user, Character target)
         {
-            float randomChance = Random.Range(0f, 1f);
+            float randomChance = UnityEngine.Random.Range(0f, 1f);
+
+#if UNITY_ONLINE
+            float successChance = user.currentACC.Value - target.currentRES.Value;
+#else
 
             float successChance = user.currentACC - target.currentRES;
+#endif
 
             float applyChance = Mathf.Clamp(successChance, 0.05f, 0.85f);
 
@@ -216,19 +402,25 @@ namespace DualKaiser
 
         // Skill Activation Methods
 
-        public void ActivateS1(Character target)
+        public void ActivateS1(Character user, Character target)
         {
             offensiveSkill.Activate(this, target);
+
+            StartCoroutine(PlayOSVFX(user, target));
         }
 
-        public void ActivateS2(Character target)
+        public void ActivateS2(Character user, Character target)
         {
             defensiveSkill.Activate(this, target);
+
+            StartCoroutine(PlayDSVFX(user, target));
         }
 
-        public void ActivateUS(Character target)
+        public void ActivateUS(Character user, Character target)
         {
             ultimateSkill.Activate(this, target);
+
+            StartCoroutine(PlayUSVFX(user, target));
         }
 
         public void ActivatePS(Character target)
@@ -236,11 +428,122 @@ namespace DualKaiser
             passiveSkill.Activate(this, target);
         }
 
-        // Public Methods
+        // Anim + VFX Methods
+
+        public IEnumerator PlayOSVFX(Character user, Character target)
+        {
+            foreach (var anim in OSAnimList)
+            {
+                if (anim != null)
+                {
+                    anim.PlayAnim(user);
+                }
+            }
+
+            yield return new WaitForSeconds(OSDelay);
+
+            foreach (var vfx in OSVFXList)
+            {
+                if (vfx != null)
+                {
+                    vfx.PlayVFX(user, target);
+                }
+            }
+        }
+
+        public IEnumerator PlayDSVFX(Character user, Character target)
+        {
+            foreach (var anim in DSAnimList)
+            {
+                if (anim != null)
+                {
+                    anim.PlayAnim(user);
+                }
+            }
+
+            yield return new WaitForSeconds(DSDelay);
+
+            foreach (var vfx in DSVFXList)
+            {
+                if (vfx != null)
+                {
+                    vfx.PlayVFX(user, target);
+                }
+            }
+        }
+
+        public IEnumerator PlayUSVFX(Character user, Character target)
+        {
+            foreach (var anim in USAnimList)
+            {
+                if (anim != null)
+                {
+                    anim.PlayAnim(user);
+                }
+            }
+
+            yield return new WaitForSeconds(USDelay);
+
+            foreach (var vfx in USVFXList)
+            {
+                if (vfx != null)
+                {
+                    vfx.PlayVFX(user, target);
+                }
+            }
+        }
+
+        public void PlayDamageVFX(Character target)
+        {
+            foreach (var anim in DamageAnimList)
+            {
+                if (anim != null)
+                {
+                    anim.PlayAnim(target);
+                    Debug.Log("Hit" + target.name);
+                }
+            }
+        }
+
+    // Public Methods
+
+    public void UpdateUI()
+        {
+            charHPValue.text = currentHP.Value.ToString();
+
+            hpslider.value = currentHP.Value;
+
+            amrslider.value = currentAMR.Value;
+        }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.tag == "Projectile")
+            {
+                PlayDamageVFX(this);
+            }
+        }
 
         public void TakeDamage(int damage)
         {
-            // Check if there is Armour
+#if UNITY_ONLINE
+        if (IsServer)
+        {
+#endif
+
+#if UNITY_ONLINE
+            if (currentAMR.Value > 0)
+            {
+                int armourAbsorbed = Mathf.Min(damage, currentAMR.Value);
+                currentAMR.Value -= armourAbsorbed;
+                damage -= armourAbsorbed;
+
+                if (currentAMR.Value < 0)
+                {
+                    currentAMR.Value = 0;
+                }
+            }
+#else
             if (currentAMR > 0)
             {
                 int armourAbsorbed = Mathf.Min(damage, currentAMR);
@@ -252,101 +555,207 @@ namespace DualKaiser
                     currentAMR = 0;
                 }
             }
+#endif
 
-            // Leftover Damage
+#if UNITY_ONLINE
+            if (damage > 0)
+            {
+                currentHP.Value -= damage - (int)(0.15f * currentDEF.Value);
+            }
+#else
             if (damage > 0)
             {
                 currentHP -= damage - (int)(0.15f * currentDEF);
             }
+#endif
+
+#if UNITY_ONLINE
+        }
+#endif
         }
 
         public void TakePierceDamage(int damage)
-        { 
+        {
+#if UNITY_ONLINE
+        if (IsServer)
+        {
+#endif
+
+#if UNITY_ONLINE
+            if (damage > 0)
+            {
+                currentHP.Value -= damage;
+            }
+#else
             if (damage > 0)
             {
                 currentHP -= damage;
             }
+#endif
+
+#if UNITY_ONLINE
+        }
+#endif
         }
 
         public void Heal(int amount)
         {
+#if UNITY_ONLINE
+        if (IsServer)
+        {
+#endif
+
+#if UNITY_ONLINE
+            currentHP.Value += amount;
+
+            if (currentHP.Value >= baseHP)
+            {
+                currentHP.Value = baseHP;
+            }
+#else
             currentHP += amount;
 
             if (currentHP >= baseHP)
             {
                 currentHP = baseHP;
             }
+#endif
+
+#if UNITY_ONLINE
+        }
+#endif
         }
 
         public void Cleanse()
         {
-            foreach (var debuff in activeDebuffs.ToList()) 
+            foreach (var debuff in activeDebuffs.ToList())
             {
                 debuff.RemoveDebuff(this);
                 debuffDurations.Remove(debuff);
             }
-            activeDebuffs.Clear(); // Clear the list of active debuffs
+            activeDebuffs.Clear();
 
-            // Remove all DOTs
-            activeDots.Clear(); // Clear the list of active DOTs 
+            activeDots.Clear();
         }
 
         // Buff Methods
 
         public void BuffAtk(int BuffAmount)
         {
+#if UNITY_ONLINE
+            if (!IsServer) return;
+
+            currentATK.Value += BuffAmount;
+#else
             currentATK += BuffAmount;
+#endif
         }
 
         public void BuffDef(int BuffAmount)
         {
+#if UNITY_ONLINE
+            if (!IsServer) return;
+
+            currentDEF.Value += BuffAmount;
+#else
             currentDEF += BuffAmount;
+#endif
         }
 
         public void BuffHP(int BuffAmount)
         {
+#if UNITY_ONLINE
+            if (!IsServer) return;
+
+            currentHP.Value += BuffAmount;
+#else
             currentHP += BuffAmount;
+#endif
         }
 
         public void BuffAMR(int BuffAmount)
         {
+#if UNITY_ONLINE
+            if (!IsServer) return;
+
+            currentAMR.Value += BuffAmount;
+#else
             currentAMR += BuffAmount;
+#endif
         }
 
         public void BuffACC(float BuffAmountF)
         {
+#if UNITY_ONLINE
+            if (!IsServer) return;
+
+            currentACC.Value += BuffAmountF;
+
+            if (currentACC.Value >= 1.0f)
+            {
+                currentACC.Value = 1.0f;
+            }
+#else
             currentACC += BuffAmountF;
 
             if (currentACC >= 1.0f)
             {
                 currentACC = 1.0f;
             }
+#endif
         }
 
         public void BuffRES(float BuffAmountF)
         {
+#if UNITY_ONLINE
+            if (!IsServer) return;
+
+            currentRES.Value += BuffAmountF;
+
+            if (currentRES.Value >= 1.0f)
+            {
+                currentRES.Value = 1.0f;
+            }
+#else
             currentRES += BuffAmountF;
 
             if (currentRES >= 1.0f)
             {
                 currentRES = 1.0f;
             }
+#endif
         }
 
         public void BuffCritR(float BuffAmountF)
         {
+#if UNITY_ONLINE
+            if (!IsServer) return;
+
+            currentCritR.Value += BuffAmountF;
+
+            if (currentCritR.Value >= 1.0f)
+            {
+                currentCritR.Value = 1.0f;
+            }
+#else
             currentCritR += BuffAmountF;
 
             if (currentCritR >= 1.0f)
             {
                 currentCritR = 1.0f;
             }
+#endif
         }
 
         public void BuffCritDmg(float BuffAmountF)
         {
-            currentCritDmg += BuffAmountF;
-        }
+#if UNITY_ONLINE
+            if (!IsServer) return;
 
+            currentCritDmg.Value += BuffAmountF;
+#else
+            currentCritDmg += BuffAmountF;
+#endif
+        }
     }
 }

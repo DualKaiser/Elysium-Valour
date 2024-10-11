@@ -43,6 +43,23 @@ namespace DualKaiser
             {
                 float statValue = 0f;
 
+#if UNITY_ONLINE
+                switch (scalingAttribute)
+                {
+                    case ScaleStat.ATK:
+                        statValue = user.currentATK.Value;
+                        break;
+                    case ScaleStat.DEF:
+                        statValue = user.currentDEF.Value;
+                        break;
+                    case ScaleStat.HP:
+                        statValue = user.currentHP.Value;
+                        break;
+                    case ScaleStat.AMR:
+                        statValue = user.currentAMR.Value;
+                        break;
+                }
+#else
                 switch (scalingAttribute)
                 {
                     case ScaleStat.ATK:
@@ -58,7 +75,7 @@ namespace DualKaiser
                         statValue = user.currentAMR;
                         break;
                 }
-
+#endif
                 int amount = (int)(statValue * Potency);
                 user.Heal(amount);
             }

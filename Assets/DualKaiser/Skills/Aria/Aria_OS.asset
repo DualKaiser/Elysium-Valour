@@ -16,6 +16,8 @@ MonoBehaviour:
   SkillType: 0
   skillDescription: Deal 30% Atk and apply 2 stacks of Burn. This attack has a 30%
     chance to Pierce (Ignore Damage Reduction)
+  VFXList:
+  - {fileID: 11400000, guid: ac7a8d7b6a4fd40758e0b48db842a132, type: 2}
   skillEffects:
   - {fileID: 11400000, guid: 527c37b23c0984c779caae401334993a, type: 2}
   - {fileID: 11400000, guid: 5d786fd93a5d341818614e16c9794cae, type: 2}

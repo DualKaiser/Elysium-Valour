@@ -42,7 +42,7 @@ namespace DualKaiser
                 user.ApplyBuff(buff);
             }
 
-            user.ActivateS1(target);
+            user.ActivateS1(user, target);
         }
     }
 }

@@ -601,7 +601,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C1DSButton
         m_Mode: 1
@@ -663,6 +663,7 @@ GameObject:
   - component: {fileID: 368200582}
   - component: {fileID: 368200581}
   - component: {fileID: 368200580}
+  - component: {fileID: 368200583}
   m_Layer: 5
   m_Name: C1US
   m_TagString: Untagged
@@ -734,7 +735,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C1USButton
         m_Mode: 1
@@ -784,6 +785,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368200578}
   m_CullTransparentMesh: 1
+--- !u!114 &368200583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368200578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: 
 --- !u!1 &421518173
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +881,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C1OSButton
         m_Mode: 1
@@ -1596,17 +1610,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5828343742399580776, guid: 16cee921f779c4176af9637e1d7753c2, type: 3}
   m_PrefabInstance: {fileID: 212978152}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &654096878 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9134080682044766661, guid: 16cee921f779c4176af9637e1d7753c2, type: 3}
-  m_PrefabInstance: {fileID: 212978152}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &670105436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,6 +2001,7 @@ GameObject:
   - component: {fileID: 857174009}
   - component: {fileID: 857174008}
   - component: {fileID: 857174007}
+  - component: {fileID: 857174010}
   m_Layer: 5
   m_Name: C2DS
   m_TagString: Untagged
@@ -2069,7 +2073,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C2DSButton
         m_Mode: 1
@@ -2119,6 +2123,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857174005}
   m_CullTransparentMesh: 1
+--- !u!114 &857174010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857174005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: 
 --- !u!1 &869555180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,7 +2404,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 16
+  field of view: 18
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2425,17 +2442,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5828343742399580776, guid: 16cee921f779c4176af9637e1d7753c2, type: 3}
   m_PrefabInstance: {fileID: 1739403113}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1058068683 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9134080682044766661, guid: 16cee921f779c4176af9637e1d7753c2, type: 3}
-  m_PrefabInstance: {fileID: 1739403113}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1079116088
 GameObject:
   m_ObjectHideFlags: 0
@@ -2519,7 +2525,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C1DSButton
         m_Mode: 1
@@ -2569,6 +2575,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079116088}
   m_CullTransparentMesh: 1
+--- !u!1 &1092225878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1092225882}
+  - component: {fileID: 1092225881}
+  - component: {fileID: 1092225880}
+  - component: {fileID: 1092225879}
+  - component: {fileID: 1092225883}
+  m_Layer: 0
+  m_Name: Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1092225879
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092225878}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1092225880
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092225878}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials: []
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1092225881
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092225878}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1092225882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092225878}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1092225883
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092225878}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1110826955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,6 +2987,7 @@ GameObject:
   - component: {fileID: 1117681896}
   - component: {fileID: 1117681895}
   - component: {fileID: 1117681894}
+  - component: {fileID: 1117681897}
   m_Layer: 5
   m_Name: C2US
   m_TagString: Untagged
@@ -2920,7 +3059,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C2USButton
         m_Mode: 1
@@ -2970,6 +3109,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117681892}
   m_CullTransparentMesh: 1
+--- !u!114 &1117681897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117681892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: 
 --- !u!1 &1120844449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,7 +3315,7 @@ Transform:
   m_GameObject: {fileID: 1165197383}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0.5, z: -3}
+  m_LocalPosition: {x: -10, y: 0.5, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3178,7 +3330,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1261187314}
-  - component: {fileID: 1261187313}
+  - component: {fileID: 1261187315}
+  - component: {fileID: 1261187316}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3186,35 +3339,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1261187313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261187312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91e6fdb20f3174121999751d31ab98ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  char1: {fileID: 3097427292898269536, guid: 4e34cf1ef7a7a4939b8ef9aea4e784ea, type: 3}
-  char2: {fileID: 800211571923874942, guid: 46948c27de8ed4908b88a8d056215f07, type: 3}
-  char1spawn: {fileID: 1491924003}
-  char2spawn: {fileID: 1165197384}
-  char1HUD: {fileID: 646990320}
-  char2HUD: {fileID: 498522023}
-  char1Btns: {fileID: 1120844449}
-  char2Btns: {fileID: 1297240719}
-  char1HPValue: {fileID: 559597653}
-  char2HPValue: {fileID: 879538164}
-  damageText: {fileID: 178440398}
-  skilName: {fileID: 178440398}
-  hpslider1: {fileID: 1686022973}
-  hpslider2: {fileID: 654096878}
-  amrslider1: {fileID: 1058068683}
-  amrslider2: {fileID: 1350135810}
 --- !u!4 &1261187314
 Transform:
   m_ObjectHideFlags: 0
@@ -3230,6 +3354,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1261187315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261187312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 2490534946
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &1261187316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261187312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88caf3d0c32cd44188bb9cc477521f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  char1: {fileID: 0}
+  char2: {fileID: 0}
+  char1spawn: {fileID: 0}
+  char2spawn: {fileID: 0}
+  char1HUD: {fileID: 0}
+  char2HUD: {fileID: 0}
+  char1Btns: {fileID: 0}
+  char2Btns: {fileID: 0}
+  char1HPValue: {fileID: 0}
+  char2HPValue: {fileID: 0}
+  damageText: {fileID: 0}
+  skilName: {fileID: 0}
+  hpslider1: {fileID: 0}
+  hpslider2: {fileID: 0}
+  amrslider1: {fileID: 0}
+  amrslider2: {fileID: 0}
 --- !u!1 &1279985706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3313,7 +3487,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C1OSButton
         m_Mode: 1
@@ -3781,17 +3955,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5828343742399580776, guid: 16cee921f779c4176af9637e1d7753c2, type: 3}
   m_PrefabInstance: {fileID: 1725515008}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1350135810 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9134080682044766661, guid: 16cee921f779c4176af9637e1d7753c2, type: 3}
-  m_PrefabInstance: {fileID: 1725515008}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1389842058
 GameObject:
   m_ObjectHideFlags: 0
@@ -4206,7 +4369,7 @@ Transform:
   m_GameObject: {fileID: 1491924002}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -10, y: 0.5, z: 3}
+  m_LocalPosition: {x: -10, y: 0.5, z: 3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4251,17 +4414,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5828343742399580776, guid: 16cee921f779c4176af9637e1d7753c2, type: 3}
   m_PrefabInstance: {fileID: 2730604544443674122}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1686022973 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9134080682044766661, guid: 16cee921f779c4176af9637e1d7753c2, type: 3}
-  m_PrefabInstance: {fileID: 2730604544443674122}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1698058484
 GameObject:
   m_ObjectHideFlags: 0
@@ -4345,7 +4497,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C1DSButton
         m_Mode: 1
@@ -5243,7 +5395,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C1DSButton
         m_Mode: 1
@@ -5375,7 +5527,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: ResetScene
         m_Mode: 1
@@ -5437,6 +5589,7 @@ GameObject:
   - component: {fileID: 1966506657}
   - component: {fileID: 1966506656}
   - component: {fileID: 1966506655}
+  - component: {fileID: 1966506658}
   m_Layer: 5
   m_Name: C2OS
   m_TagString: Untagged
@@ -5508,7 +5661,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C2OSButton
         m_Mode: 1
@@ -5558,6 +5711,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966506653}
   m_CullTransparentMesh: 1
+--- !u!114 &1966506658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966506653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: 
 --- !u!1 &1984247445
 GameObject:
   m_ObjectHideFlags: 0
@@ -5570,6 +5736,7 @@ GameObject:
   - component: {fileID: 1984247449}
   - component: {fileID: 1984247448}
   - component: {fileID: 1984247447}
+  - component: {fileID: 1984247450}
   m_Layer: 5
   m_Name: C1DS
   m_TagString: Untagged
@@ -5641,7 +5808,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C1DSButton
         m_Mode: 1
@@ -5691,6 +5858,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984247445}
   m_CullTransparentMesh: 1
+--- !u!114 &1984247450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984247445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: 
 --- !u!1 &2014928378
 GameObject:
   m_ObjectHideFlags: 0
@@ -5703,6 +5883,7 @@ GameObject:
   - component: {fileID: 2014928382}
   - component: {fileID: 2014928381}
   - component: {fileID: 2014928380}
+  - component: {fileID: 2014928383}
   m_Layer: 5
   m_Name: C1OS
   m_TagString: Untagged
@@ -5774,7 +5955,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1261187313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DualKaiser.GameManager, Assembly-CSharp
         m_MethodName: C1OSButton
         m_Mode: 1
@@ -5824,6 +6005,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014928378}
   m_CullTransparentMesh: 1
+--- !u!114 &2014928383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014928378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: 
 --- !u!1 &2070418584
 GameObject:
   m_ObjectHideFlags: 0
@@ -6084,3 +6278,4 @@ SceneRoots:
   - {fileID: 1165197384}
   - {fileID: 1296098606}
   - {fileID: 1837373336}
+  - {fileID: 1092225882}

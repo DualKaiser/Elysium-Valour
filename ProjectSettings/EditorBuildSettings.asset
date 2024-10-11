@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/DualKaiser/Scenes/Online Env.unity
+    guid: e86b35a9d258945fe87ea5af4100d46a
   m_configObjects: {}

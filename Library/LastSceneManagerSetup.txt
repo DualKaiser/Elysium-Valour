@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/DualKaiser/Scenes/Combat Env.unity
+- path: Assets/DualKaiser/Scenes/Online Env.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
